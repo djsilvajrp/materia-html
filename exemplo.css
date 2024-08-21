@@ -1,0 +1,63 @@
+.cabecalho {
+    /* largura */
+    width: 100%;
+    /* altura */
+    /* height: 40px; */
+    /* borda */
+    /* border: 1px solid black; */
+    display: flex;
+    /* cor de fundo */
+    /* background-color: black; */
+}
+
+.cabecalho-container-logo {
+    width: 10%;
+    /* border: 3px solid blue; */
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho-container-logo img{
+  height: 50px;
+  width: 50px;
+}
+
+.cabecalho-container-informacoes {
+    width: 90%;
+    /* border: 3px solid blue; */
+    display: flex;
+    justify-content: right;
+}
+
+.navegacao{
+    /* largura */
+    width: 100%;
+    /* altura */
+    /* height: 30px; */
+    /* borda */
+    border: 1px solid rgb(250, 103, 103);
+    /* cor de fundo */
+    /* background-color: black; */
+}
+
+.conteudo-principal{
+    /* largura */
+    width: 100%;
+    /* altura */
+    height: 500px;
+    /* borda */
+    border: 1px solid rgb(37, 255, 95);
+    /* cor de fundo */
+    /* background-color: black; */
+}
+
+.rodape{
+    /* largura */
+    width: 100%;
+    /* altura */
+    height: 60px;
+    /* borda */
+    border: 1px solid rgb(250, 103, 103);
+    /* cor de fundo */
+    /* background-color: black; */
+}

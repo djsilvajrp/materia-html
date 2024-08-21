@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Semantico</title>
+    <link rel="stylesheet" href="./exemplo.css">
 </head>
 <body>
-    <header>
+    <header class="cabecalho">
         <!-- Cabeçalho -->
+         <div class="cabecalho-container-logo">
+            <img src="data:image/jpeg;base64,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" alt="logo da pepsi">
+         </div>
+         <div class="cabecalho-container-informacoes">
+            <p><b>Telefone:</b> xxxxxxxxxx <br> <b>Email:</b> xxxxxx@gmail.com</p>
+        </div>
     </header>
-    <nav>
+    <nav class="navegacao">
         <!-- Navegação -->
+         <ul>
+            <li>dawd</li>
+            <li>dawd</li>
+            <li>dawd</li>
+            <li>dawd</li>
+            <li>tawd</li>
+         </ul>
     </nav>
 
-    <main>
+    <main class="conteudo-principal">
         <!-- Conteudo principal -->
 
         <div>
@@ -24,7 +38,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="rodape">
         <!-- rodapé -->
     </footer>
 </html>
