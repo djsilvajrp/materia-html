@@ -1,0 +1,48 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    word-break: break-all;
+}
+
+.div-pai {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    margin-top: 150px;
+}
+
+
+.div-pai .div-filha {
+    margin: 5px;
+    /* background-color: antiquewhite; */
+    border: 1px solid black;
+    /* height: 250px; */
+    padding: 5px;
+}
+
+.div-imagem {
+    border: 1px solid blue;
+}
+
+.div-imagem img{
+    width: 100%;
+    height: 300px;
+}
+
+.div-descricao-filme {
+    border: 1px solid green;
+    padding: 10px;
+}
+
+
+.div-pai div:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+.div-pai div:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}

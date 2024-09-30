@@ -1,0 +1,51 @@
+.div1 {
+    border: 1px solid black;
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+}
+
+.div1 *{
+    margin: 10px;
+}
+
+.subdiv {
+    border: 1px solid green;
+    height: 80px;
+    width: 80px;
+}
+
+.div2 {
+    border: 1px solid black;
+    min-height: 200px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    /* justify-content: end; */
+    /* justify-content: start; */
+    /* justify-content: right; */
+    /* justify-content: left; */
+}
+
+
+.div2 *{
+    margin: 10px;
+}
+
+.div3 {
+    border: 1px solid black;
+    min-height: 200px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    /* align-items: end; */
+    /* align-items: start; */
+}
+
+
+.div3 *{
+    margin: 10px;
+}
