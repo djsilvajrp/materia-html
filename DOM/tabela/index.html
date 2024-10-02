@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <style>
+        body {
+            background-color: rgb(243, 243, 243);
+        }
+    </style>
+
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Genero</th>
+        </thead>
+        <tbody id="dados-tabela">
+            <tr>
+                <td>Nome 1</td>
+                <td>Telefone 1</td>
+                <td>Genero 1</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <form action="#">
+        <label for="">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+        <br><br>
+        <label for="">Telefone:</label>
+        <input type="text" name="telefone" id="telefone" placeholder="Digite seu telefone">
+        <br><br>
+        <label for="">Genero</label>
+        <select name="genero" id="genero">
+            <option value=""></option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+        </select>
+        <br><br>
+       
+    </form>
+
+    <button onclick="adicionar()">Adicionar</button>
+
+    <script>
+        function adicionar() {
+            let nome
+            let telefone
+            let genero
+
+            nome = document.getElementById('nome').value
+            telefone = document.getElementById('telefone').value
+            genero = document.getElementById('genero').value
+
+            let tbody = document.getElementById('dados-tabela');
+
+            let nova_linha = document.createElement('tr')
+            let celula_nome = document.createElement('td') 
+            let celula_telefone = document.createElement('td') 
+            let celula_genero = document.createElement('td') 
+
+            celula_nome.innerHTML = nome
+            celula_telefone.innerHTML = telefone
+            celula_genero.innerHTML = genero
+
+            nova_linha.appendChild(celula_nome)
+            nova_linha.appendChild(celula_telefone)
+            nova_linha.appendChild(celula_genero)
+
+            tbody.appendChild(nova_linha)
+        }
+    </script>
+</body>
+</html>
