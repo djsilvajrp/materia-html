@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo {
+    border: 1px solid black;
+    max-width: 1400px;
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.conteudo-aperelhos {
+    min-height: 50px;
+    display: flex;
+}
+
+.item-aparelho {
+    min-height: 25px;
+    border-radius: 15px;
+    width: 125px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

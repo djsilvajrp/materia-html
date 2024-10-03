@@ -35,9 +35,20 @@ body {
     margin-top: 30px;
 }
 
+.aba-ativa {
+    color: green;
+    border-bottom: 3px solid green;
+}
+
 .header-navegacao ul li{
     margin: 10px;
     cursor: pointer;
+    transition: 300ms;
+    height: 40px;
+}
+
+.header-navegacao ul li:hover{
+    color: green;
 }
 
 .header-acoes {

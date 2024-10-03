@@ -10,10 +10,44 @@
 
     <style>
         body {
-            background-color: rgb(243, 243, 243);
+            background-color: rgb(254, 254, 254);
+            font-size: larger;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: green;
+            color: white;
+        }
+
+        .titulo {
+            font-size: 28px;
+            text-decoration: underline;
+        }
+
+        .caixa-formulario {
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+
+        .caixa-formulario div {
+            margin: 10px;
+        }
+
+        .btnAdicionar {
+            margin-top: 10px;
         }
     </style>
 
+    <h1 class="titulo">
+        Tabela de pessoas
+    </h1>
     <table>
         <thead>
             <th>Nome</th>
@@ -29,34 +63,77 @@
         </tbody>
     </table>
     <hr>
-    <form action="#">
-        <label for="">Nome:</label>
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
-        <br><br>
-        <label for="">Telefone:</label>
-        <input type="text" name="telefone" id="telefone" placeholder="Digite seu telefone">
-        <br><br>
-        <label for="">Genero</label>
-        <select name="genero" id="genero">
-            <option value=""></option>
-            <option value="M">Masculino</option>
-            <option value="F">Feminino</option>
-        </select>
-        <br><br>
-       
+
+    <form action="">
+        <div class="caixa-formulario">
+            <div>
+                <label for="">Nome:</label>
+                <br>
+                <input style="width: 100%;" type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            </div>
+            <div>
+                <label for="">Telefone:</label>
+                <br>
+                <input style="width: 100%;" type="text" name="telefone" id="telefone" placeholder="Digite seu telefone">
+            </div>
+            <div>
+                <label for="">Genero:</label>
+                <br>
+                <select style="width: 100%;" name="genero" id="genero">
+                    <option value=""></option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+            </div>
+        </div>
+        <div id="erros">
+
+        </div>
     </form>
 
-    <button onclick="adicionar()">Adicionar</button>
+    <button class="btnAdicionar" onclick="adicionar()">Adicionar</button>
 
     <script>
+
+        function validar(nome, telefone, genero) {
+            console.log(nome, telefone, genero)
+            bloco_erros = document.getElementById('erros')
+
+            if (genero == '') {
+                bloco_erros.innerHTML = 'Genero é obrigatório!'
+                return false
+            }
+
+            if (isNaN(telefone)) {
+                bloco_erros.innerHTML = 'Telefone invalido!'
+                return false
+            }
+
+            if (nome == '') {
+                bloco_erros.innerHTML = 'Nome é obrigatório!'
+                return false  
+            }
+
+            bloco_erros.innerHTML = ''
+            return true
+        }
+
+
         function adicionar() {
             let nome
             let telefone
             let genero
+            let validacao
 
             nome = document.getElementById('nome').value
             telefone = document.getElementById('telefone').value
             genero = document.getElementById('genero').value
+
+            validacao = validar(nome, telefone, genero)
+            if (validacao == false) {
+                console.log('parou aqui')    
+                return
+            }
 
             let tbody = document.getElementById('dados-tabela');
 
