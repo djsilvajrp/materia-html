@@ -4,10 +4,10 @@ main {
 }
 
 .conteudo {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     max-width: 1400px;
     flex-grow: 1;
-    padding: 30px;
+    padding: 0px 30px;
 }
 
 .conteudo-aperelhos {
@@ -18,9 +18,80 @@ main {
 .item-aparelho {
     min-height: 25px;
     border-radius: 15px;
-    width: 125px;
+    padding:  7px 10px 7px 10px;
+    /* padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 7px; */
+    width: auto;
     margin: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+.item-aparelho:hover {
+    background-color: rgb(243, 243, 243);
+    color: green;
+}
+
+.aparelho-ativo {
+    background-color: #caf7ea;
+}
+
+
+.item-aparelho img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+
+.bloco {
+    min-height: 100px;
+    padding: 2px;
+}
+
+.bloco-titulo {
+    min-height: 30px;
+}
+
+.bloco-titulo p b {
+    font-size: 20px;
+}
+
+.bloco-conteudo {
+    min-height: 80px;
+    padding: 2px;
+    
+}
+
+.bloco-conteudo-item {
+    min-height: 250px;
+    width: 350px;
+}
+
+.bloco-conteudo-item-video {
+    height: 210px;
+}
+
+.bloco-conteudo-item-descricao {
+    min-height: 90px;
+    display: flex;
+}
+
+.bloco-conteudo-imagem {
+    width: 30%;
+    min-height: 90px;
+}
+
+.bloco-conteudo-texto {
+    width: 70%;
+    min-height: 90px;
+}
+
+
+.video {
+    width: 100%;
+    height: 95%;
 }

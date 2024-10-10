@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,12 +53,16 @@
             <th>Nome</th>
             <th>Telefone</th>
             <th>Genero</th>
+            <th>Ação</th>
         </thead>
         <tbody id="dados-tabela">
             <tr>
                 <td>Nome 1</td>
                 <td>Telefone 1</td>
                 <td>Genero 1</td>
+                <td>
+                    <button onclick="excluir(this)">Excluir</button>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -92,7 +96,8 @@
     </form>
 
     <button class="btnAdicionar" onclick="adicionar()">Adicionar</button>
-
+    <button class="btnLimparTabela" onclick="limpar_tabela()">Limpar tabela</button>
+    
     <script>
 
         function validar(nome, telefone, genero) {
@@ -141,16 +146,27 @@
             let celula_nome = document.createElement('td') 
             let celula_telefone = document.createElement('td') 
             let celula_genero = document.createElement('td') 
+            let celula_acao = document.createElement('td') 
 
             celula_nome.innerHTML = nome
             celula_telefone.innerHTML = telefone
             celula_genero.innerHTML = genero
+            celula_acao.innerHTML = `<button onclick="excluir(this)">Excluir</button>`
 
             nova_linha.appendChild(celula_nome)
             nova_linha.appendChild(celula_telefone)
             nova_linha.appendChild(celula_genero)
+            nova_linha.appendChild(celula_acao)
 
             tbody.appendChild(nova_linha)
+        }
+
+        function excluir(elemento) {
+            let td = elemento.parentElement
+            let tr = td.parentElement
+            console.log(tr)
+            tr.style.display = 'none'
+
         }
     </script>
 </body>
